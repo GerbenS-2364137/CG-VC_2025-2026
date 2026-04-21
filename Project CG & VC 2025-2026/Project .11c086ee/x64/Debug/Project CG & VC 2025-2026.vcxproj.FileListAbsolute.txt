@@ -1,0 +1,3 @@
+C:\Users\gerbe\CG-VC_2025-2026\Project CG & VC 2025-2026\x64\Debug\glew32d.dll
+C:\Users\gerbe\CG-VC_2025-2026\Project CG & VC 2025-2026\x64\Debug\glfw3.dll
+C:\Users\gerbe\CG-VC_2025-2026\Project CG & VC 2025-2026\Project .11c086ee\x64\Debug\Project .B6B053BF.Up2Date
