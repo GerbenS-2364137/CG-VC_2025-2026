@@ -17,8 +17,7 @@ message(STATUS "Found GLFW3 in ${GLFW3_INCLUDE_DIR}")
 
 set(LIBS glfw OpenGL::GL dl)
 
-
 include_directories(${CMAKE_SOURCE_DIR}/includes)
-add_executable(cgvc_project main.cpp)
+file(GLOB SOURCES "*.cpp")
+add_executable(cgvc_project ${SOURCES})
 target_link_libraries(cgvc_project ${LIBS} ${CMAKE_SOURCE_DIR}/lib/libGLEW.a)
-target_link_libraries(cgvc_project ${LIBS})
