@@ -15,9 +15,15 @@ message(STATUS "GLM included at ${GLM_INCLUDE_DIR}")
 find_package(GLFW3 REQUIRED)
 message(STATUS "Found GLFW3 in ${GLFW3_INCLUDE_DIR}")
 
-set(LIBS glfw OpenGL::GL dl)
+
+set(LIBS glfw OpenGL::GL dl assimp)
 
 include_directories(${CMAKE_SOURCE_DIR}/includes)
 file(GLOB SOURCES "*.cpp")
 add_executable(cgvc_project ${SOURCES})
-target_link_libraries(cgvc_project ${LIBS} ${CMAKE_SOURCE_DIR}/lib/libGLEW.a)
+target_link_libraries(cgvc_project
+        ${LIBS}
+        ${CMAKE_SOURCE_DIR}/lib/libGLEW.a
+        ${CMAKE_SOURCE_DIR}/lib/libassimp.a
+        z
+)
