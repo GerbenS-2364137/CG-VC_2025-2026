@@ -1,6 +1,7 @@
 #include <GL/glew.h>
 #include <GLFW/glfw3.h>
 #include <iostream>
+#include "Bezier.h"
 
 int main() {
     if (!glfwInit()) {
@@ -23,6 +24,14 @@ int main() {
     }
 
     std::cout << "OpenGL versie: " << glGetString(GL_VERSION) << "\n";
+
+
+    std::cout << "Setting up Bezier curves..." << std::endl;
+    int numCurves = 6;
+    float radius = 10.0f;
+    float hoogteFactor = 2.0f;
+
+    std::vector<Bezier::BezierCurve> curves = Bezier::generateClosedBezierPath(numCurves, radius, hoogteFactor);
 
     while (!glfwWindowShouldClose(window)) {
         glClear(GL_COLOR_BUFFER_BIT);
