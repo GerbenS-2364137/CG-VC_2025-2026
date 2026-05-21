@@ -1,5 +1,11 @@
 ﻿  Bezier.cpp
   main.cpp
+C:\Users\gerbe\CG-VC_2025-2026\Project CG & VC 2025-2026\main.cpp(64,17): warning C4244: '=': conversion from 'double' to 'float', possible loss of data
+C:\Users\gerbe\CG-VC_2025-2026\Project CG & VC 2025-2026\main.cpp(65,17): warning C4244: '=': conversion from 'double' to 'float', possible loss of data
+C:\Users\gerbe\CG-VC_2025-2026\Project CG & VC 2025-2026\main.cpp(69,19): warning C4244: 'initializing': conversion from 'double' to 'float', possible loss of data
+C:\Users\gerbe\CG-VC_2025-2026\Project CG & VC 2025-2026\main.cpp(70,19): warning C4244: 'initializing': conversion from 'double' to 'float', possible loss of data
+C:\Users\gerbe\CG-VC_2025-2026\Project CG & VC 2025-2026\main.cpp(71,13): warning C4244: '=': conversion from 'double' to 'float', possible loss of data
+C:\Users\gerbe\CG-VC_2025-2026\Project CG & VC 2025-2026\main.cpp(72,13): warning C4244: '=': conversion from 'double' to 'float', possible loss of data
   Generating Code...
   Project CG & VC 2025-2026.vcxproj -> C:\Users\gerbe\CG-VC_2025-2026\Project CG & VC 2025-2026\x64\Debug\Project CG & VC 2025-2026.exe
   'pwsh.exe' is not recognized as an internal or external command,

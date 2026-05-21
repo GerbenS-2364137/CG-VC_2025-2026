@@ -124,12 +124,16 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="Bezier.cpp" />
-    <ClCompile Include="camera.cpp" />
+    <ClCompile Include="Camera.cpp" />
+    <ClCompile Include="FollowCam.cpp" />
+    <ClCompile Include="FreeCam.cpp" />
     <ClCompile Include="main.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Bezier.h" />
-    <ClInclude Include="camera.h" />
+    <ClInclude Include="Camera.h" />
+    <ClInclude Include="FollowCam.h" />
+    <ClInclude Include="FreeCam.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
