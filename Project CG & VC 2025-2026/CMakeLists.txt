@@ -3,27 +3,51 @@ project(cgvc_project)
 
 set(CMAKE_CXX_STANDARD 17)
 
+# Local libraries
 link_directories(${CMAKE_SOURCE_DIR}/lib)
 
-set(CMAKE_MODULE_PATH ${CMAKE_MODULE_PATH} "${CMAKE_SOURCE_DIR}/cmake/modules/")
+# Project includes
+include_directories(
+        ${CMAKE_SOURCE_DIR}/includes
+)
 
+# OpenGL
 find_package(OpenGL REQUIRED)
+set(CMAKE_MODULE_PATH ${CMAKE_MODULE_PATH}
+        "${CMAKE_SOURCE_DIR}/cmake/modules/")
 
-# find the required packages
-find_package(GLM REQUIRED)
-message(STATUS "GLM included at ${GLM_INCLUDE_DIR}")
-find_package(GLFW3 REQUIRED)
-message(STATUS "Found GLFW3 in ${GLFW3_INCLUDE_DIR}")
+find_package(assimp REQUIRED MODULE)
+find_package(PugiXML REQUIRED)
+find_package(polyclipping CONFIG REQUIRED)
+find_package(poly2tri CONFIG REQUIRED)
+find_package(minizip CONFIG REQUIRED)
+
+# Source files
+set(SOURCES
+        main.cpp
+        Camera.cpp
+        Bezier.cpp
+        CameraController.cpp
+        FollowCam.cpp
+        FreeCam.cpp
+        object.cpp
+)
 
 
-set(LIBS glfw OpenGL::GL dl assimp)
+# Executable
+add_executable(cgvc_project ${SOURCES}
+        includes/glad/glad.c)
 
-include_directories(${CMAKE_SOURCE_DIR}/includes)
-file(GLOB SOURCES "*.cpp")
-add_executable(cgvc_project ${SOURCES})
+# Link everything
 target_link_libraries(cgvc_project
-        ${LIBS}
+        glfw
+        GL
+        dl
+        assimp::assimp
         ${CMAKE_SOURCE_DIR}/lib/libGLEW.a
-        ${CMAKE_SOURCE_DIR}/lib/libassimp.a
         z
+        polyclipping::polyclipping
+        poly2tri::poly2tri
+        pugixml
+        minizip::minizip
 )

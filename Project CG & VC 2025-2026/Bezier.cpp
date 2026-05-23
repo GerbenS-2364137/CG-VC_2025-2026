@@ -45,7 +45,7 @@ namespace Bezier {
     }
 
 
-    // De Casteljau-algoritme voor evaluatie van Bézier curve
+    // De Casteljau-algoritme voor evaluatie van Bï¿½zier curve
     glm::vec3 BezierCurve::evaluate(float t) const {
         // Zorg ervoor dat t tussen 0 en 1 ligt
         if (t < 0.0f) t = 0.0f;
@@ -115,8 +115,8 @@ namespace Bezier {
         return glm::normalize(p);
     }
 
-    // Deformeer mesh langs Bézier curve
-    std::vector<glm::vec3> Bezier::deformMeshAlongBezier(
+    // Deformeer mesh langs Bï¿½zier curve
+    std::vector<glm::vec3> deformMeshAlongBezier(
         const Bezier::BezierCurve& curve,
         const std::vector<glm::vec3>& originalMesh,
         int numSegments

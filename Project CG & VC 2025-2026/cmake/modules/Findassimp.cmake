@@ -2,14 +2,16 @@ set(ASSIMP_ROOT "${CMAKE_SOURCE_DIR}/external/assimp")
 
 find_path(ASSIMP_INCLUDE_DIR
         NAMES assimp/Importer.hpp
-        PATHS "${ASSIMP_ROOT}/includes"
-        NO_DEFAULT_PATH
+        PATHS
+        "${ASSIMP_ROOT}/include"
+        /usr/include
 )
 
 find_library(ASSIMP_LIBRARY
         NAMES assimp
-        PATHS "${ASSIMP_ROOT}/lib"
-        NO_DEFAULT_PATH
+        PATHS
+        "${ASSIMP_ROOT}/lib"
+        /usr/lib/x86_64-linux-gnu
 )
 
 include(FindPackageHandleStandardArgs)

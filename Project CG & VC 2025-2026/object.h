@@ -7,9 +7,9 @@
 #include <glad/glad.h>
 #include <glm/glm.hpp>
 
-class object {
+class Object {
     public:
-    object(const std::string& modelPath, const std::string& texturePath = "");
+    Object(const std::string& modelPath, const std::string& texturePath = "");
     bool init();
     void render();
     void cleanup();
