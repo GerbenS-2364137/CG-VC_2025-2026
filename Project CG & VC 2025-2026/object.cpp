@@ -177,6 +177,7 @@ void Object::loadTexture() {
     }
     else {
         std::cerr << "Failed to load texture: " << texturePath << "\n";
+        std::cerr << "stbi reason: " << stbi_failure_reason() << "\n";
     }
 
     stbi_image_free(data);

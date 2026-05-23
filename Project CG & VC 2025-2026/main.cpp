@@ -7,6 +7,7 @@
 #include "CameraController.h"
 #include "object.h"
 
+
 CameraController cameraController;
 float deltaTime = 0.0f;
 float lastFrame = 0.0f;
@@ -39,6 +40,7 @@ void processInput(GLFWwindow* window) {
 }
 
 int main() {
+
     if (!glfwInit()) {
         std::cerr << "GLFW init mislukt\n";
         return -1;
@@ -109,8 +111,11 @@ int main() {
 
         glClear(GL_COLOR_BUFFER_BIT);
         glClearColor(0.2f, 0.3f, 0.3f, 1.0f);
+        vehicle.render();
         glfwSwapBuffers(window);
         glfwPollEvents();
+
+
     }
 
     glfwTerminate();

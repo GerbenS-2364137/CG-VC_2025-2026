@@ -31,6 +31,7 @@ set(SOURCES
         FollowCam.cpp
         FreeCam.cpp
         object.cpp
+        includes/stb_image.cpp
 )
 
 
