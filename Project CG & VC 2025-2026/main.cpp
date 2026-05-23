@@ -1,10 +1,11 @@
-#include <GL/glew.h>
+#include <glad/glad.h>
 #include <GLFW/glfw3.h>
 #include <iostream>
 #include "Bezier.h"
 #include "FreeCam.h"
 #include "FollowCam.h"
 #include "CameraController.h"
+#include "object.h"
 
 CameraController cameraController;
 float deltaTime = 0.0f;
@@ -52,8 +53,8 @@ int main() {
 
     glfwMakeContextCurrent(window);
 
-    if (glewInit() != GLEW_OK) {
-        std::cerr << "GLEW init mislukt\n";
+    if (!gladLoadGLLoader((GLADloadproc)glfwGetProcAddress)) {
+        std::cerr << "GLAD init mislukt\n";
         return -1;
     }
 
@@ -68,13 +69,21 @@ int main() {
     std::cout << "OpenGL versie: " << glGetString(GL_VERSION) << "\n";
     glEnable(GL_DEPTH_TEST);
 
+    std::cout << "Loading vehicle..." << std::endl;
+    Object vehicle("objects/TeslaTruck.obj", "textures/cybertruck.jpeg");
+
+    if (!vehicle.init()) {
+        std::cerr << "Failed to initialize vehicle!" << std::endl;
+        return -1;
+    }
+    std::cout << "Vehicle loaded successfully" << std::endl;
 
     std::cout << "Setting up Bezier curves..." << std::endl;
     int numCurves = 6;
     float radius = 10.0f;
     float hoogteFactor = 2.0f;
 
-    // Bézier setup
+    // Bï¿½zier setup
     std::vector<Bezier::BezierCurve> curves = Bezier::generateClosedBezierPath(numCurves, radius, hoogteFactor);
 
     // Camera setup
