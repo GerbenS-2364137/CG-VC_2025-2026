@@ -4,76 +4,37 @@
 #include "Bezier.h"
 #include "FreeCam.h"
 #include "FollowCam.h"
+#include "CameraController.h"
 
-// Camera
-std::unique_ptr<Camera> camera;
-bool followView = false;  // Voor toggling tussen Free en Follow
+CameraController cameraController;
 float deltaTime = 0.0f;
 float lastFrame = 0.0f;
-float lastX = 400, lastY = 300;
-bool firstMouse = true;
 
-void processCameraType(GLFWwindow* window) {
-    static bool cWasPressed = false;  // Houdt de vorige status van de toets bij
-    bool cPressed = glfwGetKey(window, GLFW_KEY_C) == GLFW_PRESS;
-
-    // De status omdraaien bij het loslaten van de toets
-    if (cPressed && !cWasPressed) {
-        followView = !followView;  // Wissel tussen views
-        std::cout << "Switching to " << (followView ? "Follow" : "Free") << " camera mode" << std::endl;
-
-        if (followView) {
-            // Zorg ervoor dat FollowCamera correct is geërfd van Camera
-            camera = std::make_unique<FollowCamera>();
-        }
-        else {
-            // Zorg ervoor dat FreeCamera correct is geërfd van Camera
-            camera = std::make_unique<FreeCamera>(camera->Position, camera->Up, camera->Yaw, camera->Pitch, camera->Zoom);
-        }
+void mouse_callback(GLFWwindow* window, double xpos, double ypos) {
+    static float lastX = 400, lastY = 300;
+    static bool firstMouse = true;
+    if (firstMouse) {
+        lastX = (float)xpos;
+        lastY = (float)ypos;
+        firstMouse = false;
     }
 
-    // Bijhouden of de toets ingedrukt was voor de volgende frame
-    cWasPressed = cPressed;
+    float xoffset = (float)xpos - lastX;
+    float yoffset = lastY - (float)ypos; // reversed
+    lastX = (float)xpos;
+    lastY = (float)ypos;
 
-    if (!followView) {
-        if (glfwGetKey(window, GLFW_KEY_W) == GLFW_PRESS)
-            camera->ProcessKeyboard(Camera_Movement::FORWARD, deltaTime);
-        if (glfwGetKey(window, GLFW_KEY_S) == GLFW_PRESS)
-            camera->ProcessKeyboard(Camera_Movement::BACKWARD, deltaTime);
-        if (glfwGetKey(window, GLFW_KEY_A) == GLFW_PRESS)
-            camera->ProcessKeyboard(Camera_Movement::LEFT, deltaTime);
-        if (glfwGetKey(window, GLFW_KEY_D) == GLFW_PRESS)
-            camera->ProcessKeyboard(Camera_Movement::RIGHT, deltaTime);
-        if (glfwGetKey(window, GLFW_KEY_SPACE) == GLFW_PRESS)
-            camera->ProcessKeyboard(Camera_Movement::UP, deltaTime);
-        if (glfwGetKey(window, GLFW_KEY_LEFT_SHIFT) == GLFW_PRESS)
-            camera->ProcessKeyboard(Camera_Movement::DOWN, deltaTime);
-    }
+    cameraController.processMouseMovement(xoffset, yoffset);
+}
+
+void scroll_callback(GLFWwindow* window, double xoffset, double yoffset) {
+    cameraController.processMouseScroll((float)yoffset);
 }
 
 void processInput(GLFWwindow* window) {
     if (glfwGetKey(window, GLFW_KEY_ESCAPE) == GLFW_PRESS)
         glfwSetWindowShouldClose(window, true);
-
-    // Free-cam / Follow-cam
-    processCameraType(window);
-}
-
-void mouse_callback(GLFWwindow* window, double xpos, double ypos) {
-    if (firstMouse) {
-        lastX = xpos;
-        lastY = ypos;
-        firstMouse = false;
-    }
-
-    float xoffset = xpos - lastX;
-    float yoffset = lastY - ypos; // reversed
-    lastX = xpos;
-    lastY = ypos;
-
-    if (!followView) {
-        camera->ProcessMouseMovement(xoffset, yoffset);
-    }
+    cameraController.processInput(window, deltaTime);
 }
 
 int main() {
@@ -96,7 +57,16 @@ int main() {
         return -1;
     }
 
+    glfwWindowHint(GLFW_CONTEXT_VERSION_MAJOR, 3);
+    glfwWindowHint(GLFW_CONTEXT_VERSION_MINOR, 3);
+    glfwWindowHint(GLFW_OPENGL_PROFILE, GLFW_OPENGL_CORE_PROFILE);
+    glfwWindowHint(GLFW_DEPTH_BITS, 24);
+
+    const int screenWidth = 800;
+    const int screenHeight = 600;
+
     std::cout << "OpenGL versie: " << glGetString(GL_VERSION) << "\n";
+    glEnable(GL_DEPTH_TEST);
 
 
     std::cout << "Setting up Bezier curves..." << std::endl;
@@ -108,9 +78,26 @@ int main() {
     std::vector<Bezier::BezierCurve> curves = Bezier::generateClosedBezierPath(numCurves, radius, hoogteFactor);
 
     // Camera setup
-    camera = std::make_unique<FreeCamera>();
+    
 
+    int frameCount = 0;
     while (!glfwWindowShouldClose(window)) {
+        frameCount++;
+
+        float currentFrame = glfwGetTime();
+        deltaTime = currentFrame - lastFrame;
+        lastFrame = currentFrame;
+
+        processInput(window);
+
+        // Clear screen
+        glClearColor(0.1f, 0.1f, 0.1f, 1.0f);
+        glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
+
+        // cameraController.updateFollowCamera(objectPos, tangent, deltaTime); // <- wanneer object berekend wordt
+        glm::mat4 view = cameraController.getViewMatrix();
+        glm::mat4 projection = glm::perspective(glm::radians(cameraController.getZoom()), 800.0f / 600.0f, 0.1f, 500.0f);
+
         glClear(GL_COLOR_BUFFER_BIT);
         glClearColor(0.2f, 0.3f, 0.3f, 1.0f);
         glfwSwapBuffers(window);

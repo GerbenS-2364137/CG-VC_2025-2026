@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <ItemGroup Label="ProjectConfigurations">
     <ProjectConfiguration Include="Debug|Win32">
@@ -125,6 +125,7 @@
   <ItemGroup>
     <ClCompile Include="Bezier.cpp" />
     <ClCompile Include="Camera.cpp" />
+    <ClCompile Include="CameraController.cpp" />
     <ClCompile Include="FollowCam.cpp" />
     <ClCompile Include="FreeCam.cpp" />
     <ClCompile Include="main.cpp" />
@@ -132,6 +133,7 @@
   <ItemGroup>
     <ClInclude Include="Bezier.h" />
     <ClInclude Include="Camera.h" />
+    <ClInclude Include="CameraController.h" />
     <ClInclude Include="FollowCam.h" />
     <ClInclude Include="FreeCam.h" />
   </ItemGroup>
