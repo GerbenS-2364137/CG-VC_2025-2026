@@ -32,6 +32,8 @@ set(SOURCES
         FreeCam.cpp
         object.cpp
         includes/stb_image.cpp
+        shader.cpp
+        shader.h
 )
 
 
