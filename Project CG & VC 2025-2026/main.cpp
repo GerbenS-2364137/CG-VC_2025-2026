@@ -10,6 +10,7 @@
 #include "shader.h"
 #include "BezierVisualiser.h"
 #include "lichtbron.h"
+#include "postProcessor.h"
 #include <ranges>
 
 
@@ -28,6 +29,8 @@ std::vector<glm::vec3> colors = {
     glm::vec3(0.0f, 1.0f, 1.0f)  // Cyaan
 };
 int currentColorIndex = 0;
+
+std::unique_ptr<PostProcessor> postProcessor;
 
 void framebuffer_size_callback(GLFWwindow* window, int width, int height) {
     glViewport(0, 0, width, height);
@@ -72,12 +75,47 @@ void processLightChange(GLFWwindow* window) {
     lWasPressed = lPressed;
 }
 
+void processPostProcess(GLFWwindow* window) {
+    static bool oneWasPressed = false;
+    static bool twoWasPressed = false;
+    static bool threeWasPressed = false;
+    static bool fourWasPressed = false;
+
+    bool onePressed = glfwGetKey(window, GLFW_KEY_1) == GLFW_PRESS;
+    bool twoPressed = glfwGetKey(window, GLFW_KEY_2) == GLFW_PRESS;
+    bool threePressed = glfwGetKey(window, GLFW_KEY_3) == GLFW_PRESS;
+    bool fourPressed = glfwGetKey(window, GLFW_KEY_4) == GLFW_PRESS;
+
+    if (onePressed && !oneWasPressed) {
+        postProcessor->setEffect(PostProcessor::NONE);
+        std::cout << "Post-processing: None" << std::endl;
+    }
+    if (twoPressed && !twoWasPressed) {
+        postProcessor->setEffect(PostProcessor::GAUSSIAN_BLUR);
+        std::cout << "Post-processing: Blur" << std::endl;
+    }
+    if (threePressed && !threeWasPressed) {
+        postProcessor->setEffect(PostProcessor::EDGE_DETECTION);
+        std::cout << "Post-processing: Edge Detection" << std::endl;
+    }
+    if (fourPressed && !fourWasPressed) {
+        postProcessor->setEffect(PostProcessor::BLOOM);
+        std::cout << "Post-processing: Bloom Effect" << std::endl;
+    }
+
+    oneWasPressed = onePressed;
+    twoWasPressed = twoPressed;
+    threeWasPressed = threePressed;
+    fourWasPressed = fourPressed;
+}
+
 void processInput(GLFWwindow* window) {
     if (glfwGetKey(window, GLFW_KEY_ESCAPE) == GLFW_PRESS)
         glfwSetWindowShouldClose(window, true);
     cameraController.processInput(window, deltaTime);
 
     processLightChange(window);
+    processPostProcess(window);
 }
 
 void renderWithLights(Shader& shader, Object& vehicle, const glm::mat4& view, const glm::mat4& projection, const glm::mat4& model) {
@@ -254,6 +292,10 @@ int main() {
     // Camera setup
     ChromaKeyOverlay overlay("textures/chromaKeyScreen.png");
 
+    // initialize de postprocessor
+    std::cout << "Initializing PostProcessor..." << std::endl;
+    postProcessor = std::make_unique<PostProcessor>(screenWidth, screenHeight);
+
     int frameCount = 0;
     while (!glfwWindowShouldClose(window)) {
 
@@ -264,6 +306,8 @@ int main() {
         lastFrame = currentFrame;
 
         processInput(window);
+
+        postProcessor->beginScene();
 
         // Bepaal de positie van de auto op de gecombineerde curve
         float d = fmod(currentFrame * animationSpeed, totalDistance);
@@ -349,6 +393,7 @@ int main() {
         }
 
         //overlay.render();
+        postProcessor->endScene();
 
         GLenum error = glGetError();
         if (error != GL_NO_ERROR) {
@@ -362,6 +407,16 @@ int main() {
             std::cerr << "Shader info log: " << shader.getInfoLog() << std::endl;
         }
 
+<<<<<<< HEAD
+=======
+
+        if (!postProcessor) {
+            std::cerr << "PostProcessor is null!" << std::endl;
+            break;
+        }
+
+
+>>>>>>> fbb4e5a (Convolutie + bloom (was eerst 2 commits, maar git doet heel vervelend op het moment))
         glfwSwapBuffers(window);
         glfwPollEvents();
     }
