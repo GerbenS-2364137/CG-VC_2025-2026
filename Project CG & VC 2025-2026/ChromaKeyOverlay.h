@@ -2,7 +2,7 @@
 #include <glad/glad.h>
 #include <glm/glm.hpp>
 #include <string>
-#include "Shader.h"
+#include "shader.h"
 
 class ChromaKeyOverlay {
 public:

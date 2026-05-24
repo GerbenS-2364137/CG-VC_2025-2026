@@ -34,6 +34,11 @@ set(SOURCES
         includes/stb_image.cpp
         shader.cpp
         shader.h
+        BezierVisualiser.cpp
+        BezierVisualiser.h
+        lichtbron.cpp
+        lichtbron.h
+        ChromaKeyOverlay.cpp
 )
 
 
