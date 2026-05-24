@@ -67,11 +67,22 @@ void ChromaKeyOverlay::initQuad() {
 
 void ChromaKeyOverlay::render() {
     glDisable(GL_DEPTH_TEST);
+
     shader.use();
-    glBindVertexArray(VAO);
+
+    // Stuur de texture naar de shader (uniform naam moet overeenkomen met de frag shader)
     glActiveTexture(GL_TEXTURE0);
     glBindTexture(GL_TEXTURE_2D, textureID);
     shader.setInt("overlayTexture", 0);
+
+    // Stuur de YCbCr keyingkleur en drempelwaarde
+    shader.setFloat("chromaKeyColor.x", chromaKey.x);
+    shader.setFloat("chromaKeyColor.y", chromaKey.y);
+    shader.setFloat("chromaThreshold", threshold);
+
+    glBindVertexArray(VAO);
     glDrawArrays(GL_TRIANGLES, 0, 6);
+    glBindVertexArray(0);
+
     glEnable(GL_DEPTH_TEST);
 }

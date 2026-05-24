@@ -12,7 +12,6 @@
 #include "lichtbron.h"
 #include <ranges>
 
-
 CameraController cameraController;
 float deltaTime = 0.0f;
 float lastFrame = 0.0f;
@@ -139,8 +138,6 @@ void renderWithLights(Shader& shader, Object& vehicle, const glm::mat4& view, co
         std::cerr << "Error during vehicle.render(): " << error << std::endl;
     }
 }
-
-
 
 void setupLights() {
     lichtbron l1(
@@ -348,7 +345,7 @@ int main() {
             visualizers[i]->render(view, projection, lightManager, cameraController.getPosition());
         }
 
-        //overlay.render();
+        overlay.render();
 
         GLenum error = glGetError();
         if (error != GL_NO_ERROR) {
