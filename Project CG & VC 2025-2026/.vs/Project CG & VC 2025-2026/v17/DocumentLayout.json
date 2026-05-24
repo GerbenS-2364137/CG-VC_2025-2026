@@ -41,21 +41,8 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 8,
+          "SelectedChildIndex": 7,
           "Children": [
-            {
-              "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "ChromaKeyOverlay.cpp",
-              "DocumentMoniker": "C:\\Users\\gerbe\\AppData\\Local\\Temp\\6fd95aed-fb8b-4e5e-bee5-ef10a6f9effb_files.zip.ffb\\ChromaKeyOverlay.cpp",
-              "RelativeDocumentMoniker": "..\\..\\AppData\\Local\\Temp\\6fd95aed-fb8b-4e5e-bee5-ef10a6f9effb_files.zip.ffb\\ChromaKeyOverlay.cpp",
-              "ToolTip": "C:\\Users\\gerbe\\AppData\\Local\\Temp\\6fd95aed-fb8b-4e5e-bee5-ef10a6f9effb_files.zip.ffb\\ChromaKeyOverlay.cpp [Read Only]",
-              "RelativeToolTip": "..\\..\\AppData\\Local\\Temp\\6fd95aed-fb8b-4e5e-bee5-ef10a6f9effb_files.zip.ffb\\ChromaKeyOverlay.cpp [Read Only]",
-              "ViewState": "AgIAAD8AAAAAAAAAAAAAAFIAAAAwAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
-              "WhenOpened": "2026-05-24T09:20:15.717Z",
-              "EditorCaption": " [Read Only]"
-            },
             {
               "$type": "Document",
               "DocumentIndex": 4,
@@ -155,10 +142,23 @@
               "RelativeDocumentMoniker": "main.cpp",
               "ToolTip": "C:\\Users\\gerbe\\CG-VC_2025-2026\\Project CG \u0026 VC 2025-2026\\main.cpp",
               "RelativeToolTip": "main.cpp",
-              "ViewState": "AgIAACgAAAAAAAAAAAAhwDIAAAABAAAAAAAAAA==",
+              "ViewState": "AgIAAMAAAAAAAAAAAAAhwNEAAABjAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
               "WhenOpened": "2026-04-21T13:31:43.676Z",
               "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "ChromaKeyOverlay.cpp",
+              "DocumentMoniker": "C:\\Users\\gerbe\\AppData\\Local\\Temp\\6fd95aed-fb8b-4e5e-bee5-ef10a6f9effb_files.zip.ffb\\ChromaKeyOverlay.cpp",
+              "RelativeDocumentMoniker": "..\\..\\AppData\\Local\\Temp\\6fd95aed-fb8b-4e5e-bee5-ef10a6f9effb_files.zip.ffb\\ChromaKeyOverlay.cpp",
+              "ToolTip": "C:\\Users\\gerbe\\AppData\\Local\\Temp\\6fd95aed-fb8b-4e5e-bee5-ef10a6f9effb_files.zip.ffb\\ChromaKeyOverlay.cpp [Read Only]",
+              "RelativeToolTip": "..\\..\\AppData\\Local\\Temp\\6fd95aed-fb8b-4e5e-bee5-ef10a6f9effb_files.zip.ffb\\ChromaKeyOverlay.cpp [Read Only]",
+              "ViewState": "AgIAAD8AAAAAAAAAAAAAAFIAAAAwAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
+              "WhenOpened": "2026-05-24T09:20:15.717Z",
+              "EditorCaption": " [Read Only]"
             }
           ]
         }

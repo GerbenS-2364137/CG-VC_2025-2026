@@ -57,6 +57,9 @@
     <ClCompile Include="lichtbron.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="postProcessor.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Camera.h">
@@ -89,6 +92,9 @@
     <ClInclude Include="BezierVisualiser.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="postProcessor.h">
+      <Filter>Source Files</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <None Include="chroma_key_frag.glsl" />
@@ -97,6 +103,21 @@
       <Filter>Resource Files</Filter>
     </None>
     <None Include="fragment_shader.glsl">
+      <Filter>Source Files</Filter>
+    </None>
+    <None Include="bloom_combiner_fragment.glsl">
+      <Filter>Source Files</Filter>
+    </None>
+    <None Include="blur_fragment.glsl">
+      <Filter>Source Files</Filter>
+    </None>
+    <None Include="brightness_fragment.glsl">
+      <Filter>Source Files</Filter>
+    </None>
+    <None Include="post_process_fragment.glsl">
+      <Filter>Source Files</Filter>
+    </None>
+    <None Include="post_process_vertex.glsl">
       <Filter>Source Files</Filter>
     </None>
   </ItemGroup>

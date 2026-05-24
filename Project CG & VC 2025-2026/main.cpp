@@ -404,16 +404,11 @@ int main() {
             std::cerr << "Shader info log: " << shader.getInfoLog() << std::endl;
         }
 
-<<<<<<< HEAD
-=======
-
         if (!postProcessor) {
             std::cerr << "PostProcessor is null!" << std::endl;
             break;
         }
 
-
->>>>>>> fbb4e5a (Convolutie + bloom (was eerst 2 commits, maar git doet heel vervelend op het moment))
         glfwSwapBuffers(window);
         glfwPollEvents();
     }

@@ -161,6 +161,7 @@
     <ClCompile Include="lichtbron.cpp" />
     <ClCompile Include="main.cpp" />
     <ClCompile Include="object.cpp" />
+    <ClCompile Include="postProcessor.cpp" />
     <ClCompile Include="road.cpp" />
     <ClCompile Include="shader.cpp" />
   </ItemGroup>
@@ -173,13 +174,19 @@
     <ClInclude Include="FollowCam.h" />
     <ClInclude Include="FreeCam.h" />
     <ClInclude Include="object.h" />
+    <ClInclude Include="postProcessor.h" />
     <ClInclude Include="road.h" />
     <ClInclude Include="shader.h" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="bloom_combiner_fragment.glsl" />
+    <None Include="blur_fragment.glsl" />
+    <None Include="brightness_fragment.glsl" />
     <None Include="chroma_key_frag.glsl" />
     <None Include="chroma_key_vert.glsl" />
     <None Include="fragment_shader.glsl" />
+    <None Include="post_process_fragment.glsl" />
+    <None Include="post_process_vertex.glsl" />
     <None Include="vertex_shader.glsl" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
