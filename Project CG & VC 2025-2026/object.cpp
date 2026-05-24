@@ -257,3 +257,63 @@ void Object::cleanup() {
         glDeleteTextures(1, &textureID);
     }
 }
+
+void Object::renderWithLights(Shader& shader, const LightManager& lightManager, const CameraController& CameraController, const glm::mat4& view, const glm::mat4& projection, const glm::mat4& model) {
+    // Make sure shader is active
+    shader.use();
+
+    // Check if shader is valid before setting uniforms
+    GLint program = 0;
+    glGetIntegerv(GL_CURRENT_PROGRAM, &program);
+    if (program == 0) {
+        std::cerr << "No shader program is currently active!" << std::endl;
+        return;
+    }
+
+    // Set uniforms with error checking
+    GLenum error = glGetError(); // Clear any previous errors
+
+    shader.setVec3("viewPos", CameraController.getPosition());
+    error = glGetError();
+    if (error != GL_NO_ERROR) {
+        std::cerr << "Error setting viewPos uniform: " << error << std::endl;
+    }
+
+    // Send light data to shader
+    lightManager.sendToShader(shader);
+    error = glGetError();
+    if (error != GL_NO_ERROR) {
+        std::cerr << "Error sending light data to shader: " << error << std::endl;
+    }
+
+    shader.setMat4("view", view);
+    error = glGetError();
+    if (error != GL_NO_ERROR) {
+        std::cerr << "Error setting view matrix: " << error << std::endl;
+    }
+
+    shader.setMat4("projection", projection);
+    error = glGetError();
+    if (error != GL_NO_ERROR) {
+        std::cerr << "Error setting projection matrix: " << error << std::endl;
+    }
+
+    shader.setMat4("model", model);
+    error = glGetError();
+    if (error != GL_NO_ERROR) {
+        std::cerr << "Error setting model matrix: " << error << std::endl;
+    }
+
+    shader.setBool("useTexture", usesTexture());
+    error = glGetError();
+    if (error != GL_NO_ERROR) {
+        std::cerr << "Error setting useTexture uniform: " << error << std::endl;
+    }
+
+    // Render object
+    render();
+    error = glGetError();
+    if (error != GL_NO_ERROR) {
+        std::cerr << "Error during vehicle.render(): " << error << std::endl;
+    }
+}

@@ -112,7 +112,7 @@ void BezierVisualiser::render(const glm::mat4& view, const glm::mat4& projection
     // Send light data to the shader
     lightManager.sendToShader(objectShader);
 
-    // Try flipping normals for road objects - remove this if it doesn't help
+
     objectShader.setBool("flipNormals", true);
 
     // Render each instance

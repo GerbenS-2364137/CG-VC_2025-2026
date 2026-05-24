@@ -6,6 +6,9 @@
 #include <vector>
 #include <glad/glad.h>
 #include <glm/glm.hpp>
+#include "shader.h"
+#include "lichtbron.h"
+#include "CameraController.h"
 
 class Object {
     public:
@@ -14,6 +17,7 @@ class Object {
     void render();
     void cleanup();
     bool usesTexture() const { return useTexture; }
+    void renderWithLights(Shader& shader, const LightManager& lightManager, const CameraController& CameraController, const glm::mat4& view, const glm::mat4& projection, const glm::mat4& model);
 
 private:
     std::string modelPath;

@@ -113,65 +113,7 @@ void processInput(GLFWwindow* window) {
     processPostProcess(window);
 }
 
-void renderWithLights(Shader& shader, Object& vehicle, const glm::mat4& view, const glm::mat4& projection, const glm::mat4& model) {
-    // Make sure shader is active
-    shader.use();
 
-    // Check if shader is valid before setting uniforms
-    GLint program = 0;
-    glGetIntegerv(GL_CURRENT_PROGRAM, &program);
-    if (program == 0) {
-        std::cerr << "No shader program is currently active!" << std::endl;
-        return;
-    }
-
-    // Set uniforms with error checking
-    GLenum error = glGetError(); // Clear any previous errors
-
-    shader.setVec3("viewPos", cameraController.getPosition());
-    error = glGetError();
-    if (error != GL_NO_ERROR) {
-        std::cerr << "Error setting viewPos uniform: " << error << std::endl;
-    }
-
-    // Send light data to shader
-    lightManager.sendToShader(shader);
-    error = glGetError();
-    if (error != GL_NO_ERROR) {
-        std::cerr << "Error sending light data to shader: " << error << std::endl;
-    }
-
-    shader.setMat4("view", view);
-    error = glGetError();
-    if (error != GL_NO_ERROR) {
-        std::cerr << "Error setting view matrix: " << error << std::endl;
-    }
-
-    shader.setMat4("projection", projection);
-    error = glGetError();
-    if (error != GL_NO_ERROR) {
-        std::cerr << "Error setting projection matrix: " << error << std::endl;
-    }
-
-    shader.setMat4("model", model);
-    error = glGetError();
-    if (error != GL_NO_ERROR) {
-        std::cerr << "Error setting model matrix: " << error << std::endl;
-    }
-
-    shader.setBool("useTexture", vehicle.usesTexture());
-    error = glGetError();
-    if (error != GL_NO_ERROR) {
-        std::cerr << "Error setting useTexture uniform: " << error << std::endl;
-    }
-
-    // Render vehicle
-    vehicle.render();
-    error = glGetError();
-    if (error != GL_NO_ERROR) {
-        std::cerr << "Error during vehicle.render(): " << error << std::endl;
-    }
-}
 
 void setupLights() {
     lichtbron l1(
@@ -373,13 +315,10 @@ int main() {
         glClearColor(0.1f, 0.1f, 0.1f, 1.0f);
         glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
 
-
-
-
         shader.use();
         shader.setInt("texture1", 0);
 
-        renderWithLights(shader, vehicle, view, projection, model);
+        vehicle.renderWithLights(shader, lightManager, cameraController, view, projection, model);
 
         for (size_t i = 0; i < curves.size(); ++i) {
             visualizers[i]->render(view, projection, lightManager, cameraController.getPosition());
