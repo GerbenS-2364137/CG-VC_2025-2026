@@ -150,6 +150,7 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="Bezier.cpp" />
+    <ClCompile Include="BezierVisualiser.cpp" />
     <ClCompile Include="Camera.cpp" />
     <ClCompile Include="CameraController.cpp" />
     <ClCompile Include="ChromaKeyOverlay.cpp" />
@@ -157,23 +158,29 @@
     <ClCompile Include="FollowCam.cpp" />
     <ClCompile Include="FreeCam.cpp" />
     <ClCompile Include="includes\stb_image.cpp" />
+    <ClCompile Include="lichtbron.cpp" />
     <ClCompile Include="main.cpp" />
     <ClCompile Include="object.cpp" />
+    <ClCompile Include="road.cpp" />
     <ClCompile Include="shader.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Bezier.h" />
+    <ClInclude Include="BezierVisualiser.h" />
     <ClInclude Include="Camera.h" />
     <ClInclude Include="CameraController.h" />
     <ClInclude Include="ChromaKeyOverlay.h" />
     <ClInclude Include="FollowCam.h" />
     <ClInclude Include="FreeCam.h" />
     <ClInclude Include="object.h" />
+    <ClInclude Include="road.h" />
     <ClInclude Include="shader.h" />
   </ItemGroup>
   <ItemGroup>
     <None Include="chroma_key_frag.glsl" />
     <None Include="chroma_key_vert.glsl" />
+    <None Include="fragment_shader.glsl" />
+    <None Include="vertex_shader.glsl" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

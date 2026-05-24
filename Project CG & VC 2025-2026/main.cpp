@@ -284,9 +284,7 @@ int main() {
         glm::vec3 curvePosition = curves[curveIndex].evaluate(t);
 
         // Bereken tangent (richting van beweging)
-        float nextT = glm::clamp(t + 0.001f, 0.0f, 1.0f);
-        glm::vec3 nextPos = curves[curveIndex].evaluate(nextT);
-        glm::vec3 tangent = glm::normalize(nextPos - curvePosition);
+        glm::vec3 tangent = curves[curveIndex].tangent(t);
 
         // Kies stabiele up-vector
         glm::vec3 up(0.0f, 1.0f, 0.0f);
@@ -344,13 +342,6 @@ int main() {
         shader.use();
         shader.setInt("texture1", 0);
 
-        // Check if shader compilation/linking was successful
-        if (!shader.isValid()) {
-            std::cerr << "Shader is not valid!" << std::endl;
-            // Try to continue without breaking - maybe print shader info log
-            std::cerr << "Shader info log: " << shader.getInfoLog() << std::endl;
-        }
-
         renderWithLights(shader, vehicle, view, projection, model);
 
         for (size_t i = 0; i < curves.size(); ++i) {
@@ -370,10 +361,6 @@ int main() {
             // Try to continue without breaking - maybe print shader info log
             std::cerr << "Shader info log: " << shader.getInfoLog() << std::endl;
         }
-
-
-
-
 
         glfwSwapBuffers(window);
         glfwPollEvents();

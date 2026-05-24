@@ -19,8 +19,15 @@ namespace Bezier {
             : controlPoints(points) {
         }
 
+        // Brute-force evaluatie via de Casteljau formule
         glm::vec3 evaluate(float t) const;
+
+        // Afgeleide/tangent op parameter t
         glm::vec3 tangent(float t) const;
+
+        // Forward differencing genereert (n+1) punten langs de curve
+        // Efficienter dan n keer evaluate() aanroepen => enkel optelling per stap
+        std::vector<glm::vec3> forwardDifferencing(int n) const;
 
         static std::vector<LookupEntry> generateLookupTable(const BezierCurve& curve, int samplesPerSegment = 100);
         static float findTforDistance(const std::vector<LookupEntry>& lut, float distance);

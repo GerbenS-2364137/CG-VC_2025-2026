@@ -35,16 +35,10 @@ void BezierVisualiser::init(const Bezier::BezierCurve& curve, const std::string&
 void BezierVisualiser::generateInstances(const Bezier::BezierCurve& curve) {
     instances.clear();
 
-    // Calculate approximate curve length for proper spacing
+    auto pts = curve.forwardDifferencing(100);
     float curveLength = 0.0f;
-    glm::vec3 prevPoint = curve.evaluate(0.0f);
-
-    for (int i = 1; i <= 100; ++i) {
-        float t = i / 100.0f;
-        glm::vec3 currentPoint = curve.evaluate(t);
-        curveLength += glm::length(currentPoint - prevPoint);
-        prevPoint = currentPoint;
-    }
+    for (size_t i = 1; i < pts.size(); ++i)
+        curveLength += glm::length(pts[i] - pts[i - 1]);
 
     // Calculate number of objects based on spacing
     int numObjects = static_cast<int>(curveLength / objectSpacing);
@@ -58,11 +52,7 @@ void BezierVisualiser::generateInstances(const Bezier::BezierCurve& curve) {
 
         ObjectInstance instance;
         instance.position = curve.evaluate(t);
-
-        // Calculate tangent for orientation
-        float nextT = glm::clamp(t + 0.01f, 0.0f, 1.0f);
-        glm::vec3 nextPos = curve.evaluate(nextT);
-        instance.tangent = glm::normalize(nextPos - instance.position);
+        instance.tangent = curve.tangent(t);
 
         // Generate transform matrix
         instance.transformMatrix = calculateTransformMatrix(instance.position, instance.tangent);

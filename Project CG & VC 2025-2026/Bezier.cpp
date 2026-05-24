@@ -61,22 +61,73 @@ namespace Bezier {
         return p;
     }
 
-    // Genereer een lookup table voor afstand-interpolatie
-    std::vector<LookupEntry> BezierCurve::generateLookupTable(const BezierCurve& curve, int samplesPerSegment) {
-        std::vector<LookupEntry> table;
-        glm::vec3 previous = curve.evaluate(0.0f);
-        float accumulatedDistance = 0.0f;
+    // Forward differencing berekent n+1 punten langs de curve
+    // via opeenvolgende optellingen van verschilvectoren (d1, d2, d3).
+    //
+    // Voor een kubische Bezier met stap i = 1/n gelden de initiële delta's:
+    //   p   = B(0) = P0
+    //   d1  = B(i) - B(0)        (eerste verschil bij stap i)
+    //   d2  = tweede orde verschil (constant na 1 stap)
+    //   d3  = derde orde verschil (constant, want B is graad 3)
+    //
+    // Elke stap p += d1, d1 += d2, d2 += d3
+    // Dit zijn enkel vec3-optellingen waardoor geen machtsverheffing meer nodig.
+    std::vector<glm::vec3> BezierCurve::forwardDifferencing(int n) const {
+        const glm::vec3& P0 = controlPoints[0];
+        const glm::vec3& P1 = controlPoints[1];
+        const glm::vec3& P2 = controlPoints[2];
+        const glm::vec3& P3 = controlPoints[3];
 
-        table.push_back({ 0.0f, 0.0f, previous });
+        float h = 1.0f / static_cast<float>(n);
+        float h2 = h * h;
+        float h3 = h2 * h;
+
+        // Initieel punt
+        glm::vec3 p = P0;
+
+        // Eerste verschilvector d1 = B(h) - B(0), uitgeschreven en gegroepeerd per macht van h
+        glm::vec3 d1 = (-3.0f * P0 + 3.0f * P1) * h
+            + (3.0f * P0 - 6.0f * P1 + 3.0f * P2) * h2
+            + (-1.0f * P0 + 3.0f * P1 - 3.0f * P2 + P3) * h3;
+
+        // Tweede verschilvector (eerste orde verschil van d1)
+        glm::vec3 d2 = (6.0f * P0 - 12.0f * P1 + 6.0f * P2) * h2
+            + (-6.0f * P0 + 18.0f * P1 - 18.0f * P2 + 6.0f * P3) * h3;
+
+        // Derde verschilvector (constant voor kubische curve)
+        glm::vec3 d3 = (-6.0f * P0 + 18.0f * P1 - 18.0f * P2 + 6.0f * P3) * h3;
+
+        std::vector<glm::vec3> pts;
+        pts.reserve(n + 1);
+
+        for (int i = 0; i <= n; ++i) {
+            pts.push_back(p);
+            p += d1;
+            d1 += d2;
+            d2 += d3;
+        }
+
+        return pts;
+    }
+
+    // Genereer een lookup table voor afstand-interpolatie
+    // Gebruikt forward differencing intern voor efficiëntie
+    std::vector<LookupEntry> BezierCurve::generateLookupTable(const BezierCurve& curve, int samplesPerSegment) {
+        // Gebruik forward differencing om de punten te berekenen
+        std::vector<glm::vec3> pts = curve.forwardDifferencing(samplesPerSegment);
+
+        std::vector<LookupEntry> table;
+        table.reserve(pts.size());
+
+        float accumulatedDistance = 0.0f;
+        table.push_back({ 0.0f, 0.0f, pts[0] });
+
 
         for (int i = 1; i <= samplesPerSegment; ++i) {
             float t = static_cast<float>(i) / samplesPerSegment;
-            glm::vec3 current = curve.evaluate(t);
-            float segmentDistance = glm::length(current - previous);
+            float segmentDistance = glm::length(pts[i] - pts[i - 1]);
             accumulatedDistance += segmentDistance;
-
-            table.push_back({ t, accumulatedDistance, current });
-            previous = current;
+            table.push_back({ t, accumulatedDistance, pts[i] });
         }
 
         return table;
