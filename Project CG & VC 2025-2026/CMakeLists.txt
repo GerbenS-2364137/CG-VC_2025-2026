@@ -39,6 +39,8 @@ set(SOURCES
         lichtbron.cpp
         lichtbron.h
         ChromaKeyOverlay.cpp
+        postProcessor.cpp
+        postProcessor.h
 )
 
 
