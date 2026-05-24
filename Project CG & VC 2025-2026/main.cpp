@@ -5,13 +5,20 @@
 #include "FreeCam.h"
 #include "FollowCam.h"
 #include "CameraController.h"
+#include "ChromaKeyOverlay.h"
 #include "object.h"
 #include "shader.h"
+#include <ranges>
 
 
 CameraController cameraController;
 float deltaTime = 0.0f;
 float lastFrame = 0.0f;
+
+void framebuffer_size_callback(GLFWwindow* window, int width, int height) {
+    glViewport(0, 0, width, height);
+    std::cout << "Framebuffer resized to: " << width << "x" << height << std::endl;
+}
 
 void mouse_callback(GLFWwindow* window, double xpos, double ypos) {
     static float lastX = 400, lastY = 300;
@@ -101,23 +108,11 @@ void renderWithLights(Shader& shader, Object& vehicle, const glm::mat4& view, co
 }
 
 int main() {
+    std::cout << "Starting OpenGL application..." << std::endl;
 
+    // GLFW initialisatie
     if (!glfwInit()) {
-        std::cerr << "GLFW init mislukt\n";
-        return -1;
-    }
-
-    GLFWwindow* window = glfwCreateWindow(800, 600, "OpenGL Test", nullptr, nullptr);
-    if (!window) {
-        std::cerr << "Venster aanmaken mislukt\n";
-        glfwTerminate();
-        return -1;
-    }
-
-    glfwMakeContextCurrent(window);
-
-    if (!gladLoadGLLoader((GLADloadproc)glfwGetProcAddress)) {
-        std::cerr << "GLAD init mislukt\n";
+        std::cerr << "Failed to initialize GLFW!" << std::endl;
         return -1;
     }
 
@@ -129,7 +124,27 @@ int main() {
     const int screenWidth = 800;
     const int screenHeight = 600;
 
-    std::cout << "OpenGL versie: " << glGetString(GL_VERSION) << "\n";
+    GLFWwindow* window = glfwCreateWindow(screenWidth, screenHeight, "OpenGL venster", NULL, NULL);
+    if (window == NULL) {
+        std::cerr << "Kan geen venster maken!\n";
+        glfwTerminate();
+        return -1;
+    }
+
+    glfwMakeContextCurrent(window);
+    glfwSetCursorPosCallback(window, mouse_callback);
+    glfwSetFramebufferSizeCallback(window, framebuffer_size_callback);
+    glfwSetInputMode(window, GLFW_CURSOR, GLFW_CURSOR_DISABLED);
+
+    // GLAD loading
+    if (!gladLoadGLLoader((GLADloadproc)glfwGetProcAddress)) {
+        std::cerr << "GLAD faalt bij laden!\n";
+        return -1;
+    }
+
+    std::cout << "OpenGL Version: " << glGetString(GL_VERSION) << std::endl;
+    std::cout << "GLSL Version: " << glGetString(GL_SHADING_LANGUAGE_VERSION) << std::endl;
+
     glEnable(GL_DEPTH_TEST);
 
     std::cout << "Loading shaders..." << std::endl;
@@ -160,8 +175,21 @@ int main() {
     // B�zier setup
     std::vector<Bezier::BezierCurve> curves = Bezier::generateClosedBezierPath(numCurves, radius, hoogteFactor);
 
+    // LUTs per curve
+    std::vector<std::vector<Bezier::LookupEntry>> curveLUTs(curves.size());
+    std::vector<float> curveLengths(curves.size());
+    float totalDistance = 0.0f;
+
+    for (size_t i = 0; i < curves.size(); ++i) {
+        curveLUTs[i] = Bezier::BezierCurve::generateLookupTable(curves[i], 200);
+        curveLengths[i] = curveLUTs[i].back().distance;
+        totalDistance += curveLengths[i];
+    }
+
+    float animationSpeed = 3.0f;
+
     // Camera setup
-    
+    ChromaKeyOverlay overlay("textures/chromaKeyScreen.png");
 
     int frameCount = 0;
     while (!glfwWindowShouldClose(window)) {
@@ -177,7 +205,6 @@ int main() {
         glClearColor(0.1f, 0.1f, 0.1f, 1.0f);
         glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
 
-        // cameraController.updateFollowCamera(objectPos, tangent, deltaTime); // <- wanneer object berekend wordt
         glm::mat4 view = cameraController.getViewMatrix();
 
         glm::vec3 modelCenter(-0.0349514, 0.019853, 0);
@@ -195,8 +222,13 @@ int main() {
 
         glm::mat4 projection = glm::perspective(glm::radians(cameraController.getZoom()), 800.0f / 600.0f, 0.1f, 500.0f);
 
+        // Bepaal de positie van de kubus op de gecombineerde curve
+        float d = fmod(currentFrame * animationSpeed, totalDistance);
+
         glClear(GL_COLOR_BUFFER_BIT);
         glClearColor(0.2f, 0.3f, 0.3f, 1.0f);
+
+        overlay.render();
 
         shader.use();
         GLenum error = glGetError();
@@ -211,7 +243,49 @@ int main() {
             std::cerr << "Shader info log: " << shader.getInfoLog() << std::endl;
         }
 
+
+        // Vind de juiste curve en lokale afstand
+        float accumulated = 0.0f;
+        int curveIndex = 0;
+        for (size_t i = 0; i < curveLengths.size(); ++i) {
+            if (d < accumulated + curveLengths[i]) {
+                curveIndex = i;
+                break;
+            }
+            accumulated += curveLengths[i];
+        }
+
+        float localDistance = d - accumulated;
+        float t = Bezier::BezierCurve::findTforDistance(curveLUTs[curveIndex], localDistance);
+        glm::vec3 curvePosition = curves[curveIndex].evaluate(t);
+
         renderWithLights(shader, vehicle, view, projection, model);
+
+
+        // Bereken tangent (richting van beweging)
+        float nextT = glm::clamp(t + 0.001f, 0.0f, 1.0f);
+        glm::vec3 nextPos = curves[curveIndex].evaluate(nextT);
+        glm::vec3 tangent = glm::normalize(nextPos - curvePosition);
+
+        // Kies stabiele up-vector
+        glm::vec3 up(0.0f, 1.0f, 0.0f);
+        if (glm::abs(glm::dot(tangent, up)) > 0.95f) {
+            up = glm::vec3(1.0f, 0.0f, 0.0f); // fallback als tangent bijna verticaal is
+        }
+
+        // Construct orthonormaal frame
+        glm::vec3 right = glm::normalize(glm::cross(up, tangent));
+        glm::vec3 correctedUp = glm::cross(tangent, right);
+
+        // ROAD POSITIONING ADJUSTMENTS
+        float roadHeightOffset = 0.25f;
+        float pathOffset = 0.0f;
+        float lateralOffset = 0.5f;
+
+        // Calculate the final vehicle position
+        glm::vec3 position = curvePosition + correctedUp * roadHeightOffset + tangent * pathOffset + right * lateralOffset;
+
+        cameraController.updateFollowCamera(position, tangent); // <- wanneer object berekend wordt
 
         glfwSwapBuffers(window);
         glfwPollEvents();

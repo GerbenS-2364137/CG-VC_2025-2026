@@ -3,13 +3,6 @@
   "WorkspaceRootPath": "C:\\Users\\gerbe\\CG-VC_2025-2026\\Project CG \u0026 VC 2025-2026\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{11C086EE-7B8A-4724-9309-CF9862FF5589}|Project CG \u0026 VC 2025-2026.vcxproj|C:\\Users\\gerbe\\CG-VC_2025-2026\\Project CG \u0026 VC 2025-2026\\FreeCam.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
-      "RelativeMoniker": "D:0:0:{11C086EE-7B8A-4724-9309-CF9862FF5589}|Project CG \u0026 VC 2025-2026.vcxproj|solutionrelative:FreeCam.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{11C086EE-7B8A-4724-9309-CF9862FF5589}|Project CG \u0026 VC 2025-2026.vcxproj|C:\\VCPKG\\INSTALLED\\X64-WINDOWS\\INCLUDE\\GLM\\GTX\\COMPATIBILITY.HPP||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{11C086EE-7B8A-4724-9309-CF9862FF5589}|Project CG \u0026 VC 2025-2026.vcxproj|C:\\Users\\gerbe\\CG-VC_2025-2026\\Project CG \u0026 VC 2025-2026\\main.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
       "RelativeMoniker": "D:0:0:{11C086EE-7B8A-4724-9309-CF9862FF5589}|Project CG \u0026 VC 2025-2026.vcxproj|solutionrelative:main.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     },
@@ -17,26 +10,28 @@
       "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\gerbe\\Computer-Graphics-and-Visual-Computing-project\\main.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     },
     {
+      "AbsoluteMoniker": "D:0:0:{11C086EE-7B8A-4724-9309-CF9862FF5589}|Project CG \u0026 VC 2025-2026.vcxproj|C:\\Users\\gerbe\\CG-VC_2025-2026\\Project CG \u0026 VC 2025-2026\\Bezier.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{11C086EE-7B8A-4724-9309-CF9862FF5589}|Project CG \u0026 VC 2025-2026.vcxproj|solutionrelative:Bezier.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{11C086EE-7B8A-4724-9309-CF9862FF5589}|Project CG \u0026 VC 2025-2026.vcxproj|C:\\Users\\gerbe\\CG-VC_2025-2026\\Project CG \u0026 VC 2025-2026\\CameraController.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{11C086EE-7B8A-4724-9309-CF9862FF5589}|Project CG \u0026 VC 2025-2026.vcxproj|solutionrelative:CameraController.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{11C086EE-7B8A-4724-9309-CF9862FF5589}|Project CG \u0026 VC 2025-2026.vcxproj|C:\\Users\\gerbe\\CG-VC_2025-2026\\Project CG \u0026 VC 2025-2026\\camera.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
       "RelativeMoniker": "D:0:0:{11C086EE-7B8A-4724-9309-CF9862FF5589}|Project CG \u0026 VC 2025-2026.vcxproj|solutionrelative:camera.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{31B05526-D604-7035-E6B9-81C2C6722176}|..\\..\\AppData\\Roaming\\Microsoft\\VisualStudio\\17.0_8261712d\\SingleFileISense\\_sfi_e94ba0f5-2ebe-4aea-a1af-c24925405ccb_.vcxproj|C:\\USERS\\GERBE\\COMPUTER-GRAPHICS-AND-VISUAL-COMPUTING-PROJECT\\CAMERA.H||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+      "AbsoluteMoniker": "D:0:0:{11C086EE-7B8A-4724-9309-CF9862FF5589}|Project CG \u0026 VC 2025-2026.vcxproj|C:\\Users\\gerbe\\CG-VC_2025-2026\\Project CG \u0026 VC 2025-2026\\chroma_key_vert.glsl||{8B382828-6202-11D1-8870-0000F87579D2}",
+      "RelativeMoniker": "D:0:0:{11C086EE-7B8A-4724-9309-CF9862FF5589}|Project CG \u0026 VC 2025-2026.vcxproj|solutionrelative:chroma_key_vert.glsl||{8B382828-6202-11D1-8870-0000F87579D2}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{11C086EE-7B8A-4724-9309-CF9862FF5589}|Project CG \u0026 VC 2025-2026.vcxproj|C:\\Users\\gerbe\\CG-VC_2025-2026\\Project CG \u0026 VC 2025-2026\\FollowCam.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
-      "RelativeMoniker": "D:0:0:{11C086EE-7B8A-4724-9309-CF9862FF5589}|Project CG \u0026 VC 2025-2026.vcxproj|solutionrelative:FollowCam.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\gerbe\\CG-VC_2025-2026\\Project CG \u0026 VC 2025-2026\\Cube.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Cube.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{11C086EE-7B8A-4724-9309-CF9862FF5589}|Project CG \u0026 VC 2025-2026.vcxproj|C:\\Users\\gerbe\\CG-VC_2025-2026\\Project CG \u0026 VC 2025-2026\\FollowCam.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
-      "RelativeMoniker": "D:0:0:{11C086EE-7B8A-4724-9309-CF9862FF5589}|Project CG \u0026 VC 2025-2026.vcxproj|solutionrelative:FollowCam.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{11C086EE-7B8A-4724-9309-CF9862FF5589}|Project CG \u0026 VC 2025-2026.vcxproj|C:\\Users\\gerbe\\CG-VC_2025-2026\\Project CG \u0026 VC 2025-2026\\FreeCam.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
-      "RelativeMoniker": "D:0:0:{11C086EE-7B8A-4724-9309-CF9862FF5589}|Project CG \u0026 VC 2025-2026.vcxproj|solutionrelative:FreeCam.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\gerbe\\Computer-Graphics-and-Visual-Computing-project\\FollowCam.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+      "AbsoluteMoniker": "D:0:0:{11C086EE-7B8A-4724-9309-CF9862FF5589}|Project CG \u0026 VC 2025-2026.vcxproj|C:\\Users\\gerbe\\CG-VC_2025-2026\\Project CG \u0026 VC 2025-2026\\CameraController.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{11C086EE-7B8A-4724-9309-CF9862FF5589}|Project CG \u0026 VC 2025-2026.vcxproj|solutionrelative:CameraController.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     }
   ],
   "DocumentGroupContainers": [
@@ -46,85 +41,82 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 1,
+          "SelectedChildIndex": 0,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "compatibility.hpp",
-              "DocumentMoniker": "C:\\vcpkg\\installed\\x64-windows\\include\\glm\\gtx\\compatibility.hpp",
-              "RelativeDocumentMoniker": "..\\..\\..\\..\\vcpkg\\installed\\x64-windows\\include\\glm\\gtx\\compatibility.hpp",
-              "ToolTip": "C:\\vcpkg\\installed\\x64-windows\\include\\glm\\gtx\\compatibility.hpp",
-              "RelativeToolTip": "..\\..\\..\\..\\vcpkg\\installed\\x64-windows\\include\\glm\\gtx\\compatibility.hpp",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAYwBMAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
-              "WhenOpened": "2026-05-21T14:27:56.564Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "FreeCam.cpp",
-              "DocumentMoniker": "C:\\Users\\gerbe\\CG-VC_2025-2026\\Project CG \u0026 VC 2025-2026\\FreeCam.cpp",
-              "RelativeDocumentMoniker": "FreeCam.cpp",
-              "ToolTip": "C:\\Users\\gerbe\\CG-VC_2025-2026\\Project CG \u0026 VC 2025-2026\\FreeCam.cpp",
-              "RelativeToolTip": "FreeCam.cpp",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAIAAAA3AAAAAAAAAA==",
+              "Title": "main.cpp",
+              "DocumentMoniker": "C:\\Users\\gerbe\\CG-VC_2025-2026\\Project CG \u0026 VC 2025-2026\\main.cpp",
+              "RelativeDocumentMoniker": "main.cpp",
+              "ToolTip": "C:\\Users\\gerbe\\CG-VC_2025-2026\\Project CG \u0026 VC 2025-2026\\main.cpp",
+              "RelativeToolTip": "main.cpp",
+              "ViewState": "AgIAAIEAAAAAAAAAAAAhwJcAAAAoAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
-              "WhenOpened": "2026-05-21T14:16:56.337Z",
+              "WhenOpened": "2026-04-21T13:31:43.676Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 9,
-              "Title": "FollowCam.cpp",
-              "DocumentMoniker": "C:\\Users\\gerbe\\Computer-Graphics-and-Visual-Computing-project\\FollowCam.cpp",
-              "RelativeDocumentMoniker": "..\\..\\Computer-Graphics-and-Visual-Computing-project\\FollowCam.cpp",
-              "ToolTip": "C:\\Users\\gerbe\\Computer-Graphics-and-Visual-Computing-project\\FollowCam.cpp",
-              "RelativeToolTip": "..\\..\\Computer-Graphics-and-Visual-Computing-project\\FollowCam.cpp",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA8AAAAuAAAAAAAAAA==",
+              "DocumentIndex": 1,
+              "Title": "main.cpp",
+              "DocumentMoniker": "C:\\Users\\gerbe\\Computer-Graphics-and-Visual-Computing-project\\main.cpp",
+              "RelativeDocumentMoniker": "..\\..\\Computer-Graphics-and-Visual-Computing-project\\main.cpp",
+              "ToolTip": "C:\\Users\\gerbe\\Computer-Graphics-and-Visual-Computing-project\\main.cpp",
+              "RelativeToolTip": "..\\..\\Computer-Graphics-and-Visual-Computing-project\\main.cpp",
+              "ViewState": "AgIAABYAAAAAAAAAAAAAACgAAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
-              "WhenOpened": "2026-05-21T13:44:36.741Z",
+              "WhenOpened": "2026-05-21T13:24:56.89Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "chroma_key_vert.glsl",
+              "DocumentMoniker": "C:\\Users\\gerbe\\CG-VC_2025-2026\\Project CG \u0026 VC 2025-2026\\chroma_key_vert.glsl",
+              "RelativeDocumentMoniker": "chroma_key_vert.glsl",
+              "ToolTip": "C:\\Users\\gerbe\\CG-VC_2025-2026\\Project CG \u0026 VC 2025-2026\\chroma_key_vert.glsl",
+              "RelativeToolTip": "chroma_key_vert.glsl",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001001|",
+              "WhenOpened": "2026-05-23T18:26:38.915Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "Bezier.cpp",
+              "DocumentMoniker": "C:\\Users\\gerbe\\CG-VC_2025-2026\\Project CG \u0026 VC 2025-2026\\Bezier.cpp",
+              "RelativeDocumentMoniker": "Bezier.cpp",
+              "ToolTip": "C:\\Users\\gerbe\\CG-VC_2025-2026\\Project CG \u0026 VC 2025-2026\\Bezier.cpp",
+              "RelativeToolTip": "Bezier.cpp",
+              "ViewState": "AgIAAHoAAAAAAAAAAAAAAIgAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
+              "WhenOpened": "2026-05-23T18:22:24.535Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 6,
-              "Title": "FollowCam.cpp",
-              "DocumentMoniker": "C:\\Users\\gerbe\\CG-VC_2025-2026\\Project CG \u0026 VC 2025-2026\\FollowCam.cpp",
-              "RelativeDocumentMoniker": "FollowCam.cpp",
-              "ToolTip": "C:\\Users\\gerbe\\CG-VC_2025-2026\\Project CG \u0026 VC 2025-2026\\FollowCam.cpp",
-              "RelativeToolTip": "FollowCam.cpp",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAABAAAAAAAAAA==",
+              "Title": "Cube.h",
+              "DocumentMoniker": "C:\\Users\\gerbe\\CG-VC_2025-2026\\Project CG \u0026 VC 2025-2026\\Cube.h",
+              "RelativeDocumentMoniker": "Cube.h",
+              "ToolTip": "C:\\Users\\gerbe\\CG-VC_2025-2026\\Project CG \u0026 VC 2025-2026\\Cube.h",
+              "RelativeToolTip": "Cube.h",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
+              "WhenOpened": "2026-05-23T18:22:16.869Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "CameraController.cpp",
+              "DocumentMoniker": "C:\\Users\\gerbe\\CG-VC_2025-2026\\Project CG \u0026 VC 2025-2026\\CameraController.cpp",
+              "RelativeDocumentMoniker": "CameraController.cpp",
+              "ToolTip": "C:\\Users\\gerbe\\CG-VC_2025-2026\\Project CG \u0026 VC 2025-2026\\CameraController.cpp",
+              "RelativeToolTip": "CameraController.cpp",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAADAAAAA6AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
-              "WhenOpened": "2026-05-21T13:44:24.57Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 7,
-              "Title": "FollowCam.h",
-              "DocumentMoniker": "C:\\Users\\gerbe\\CG-VC_2025-2026\\Project CG \u0026 VC 2025-2026\\FollowCam.h",
-              "RelativeDocumentMoniker": "FollowCam.h",
-              "ToolTip": "C:\\Users\\gerbe\\CG-VC_2025-2026\\Project CG \u0026 VC 2025-2026\\FollowCam.h",
-              "RelativeToolTip": "FollowCam.h",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA8AAAASAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
-              "WhenOpened": "2026-05-21T13:44:12.36Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 8,
-              "Title": "FreeCam.h",
-              "DocumentMoniker": "C:\\Users\\gerbe\\CG-VC_2025-2026\\Project CG \u0026 VC 2025-2026\\FreeCam.h",
-              "RelativeDocumentMoniker": "FreeCam.h",
-              "ToolTip": "C:\\Users\\gerbe\\CG-VC_2025-2026\\Project CG \u0026 VC 2025-2026\\FreeCam.h",
-              "RelativeToolTip": "FreeCam.h",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAAFAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
-              "WhenOpened": "2026-05-21T13:42:22.798Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-05-23T08:52:36.079Z"
             },
             {
               "$type": "Document",
@@ -136,47 +128,19 @@
               "RelativeToolTip": "Camera.cpp",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAABoAAAAnAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
-              "WhenOpened": "2026-05-21T11:45:24.291Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-05-21T11:45:24.291Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "Camera.h",
-              "DocumentMoniker": "C:\\Users\\gerbe\\Computer-Graphics-and-Visual-Computing-project\\Camera.h",
-              "RelativeDocumentMoniker": "..\\..\\Computer-Graphics-and-Visual-Computing-project\\Camera.h",
-              "ToolTip": "C:\\Users\\gerbe\\Computer-Graphics-and-Visual-Computing-project\\Camera.h",
-              "RelativeToolTip": "..\\..\\Computer-Graphics-and-Visual-Computing-project\\Camera.h",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAACMAAAAFAAAAAAAAAA==",
+              "DocumentIndex": 7,
+              "Title": "CameraController.h",
+              "DocumentMoniker": "C:\\Users\\gerbe\\CG-VC_2025-2026\\Project CG \u0026 VC 2025-2026\\CameraController.h",
+              "RelativeDocumentMoniker": "CameraController.h",
+              "ToolTip": "C:\\Users\\gerbe\\CG-VC_2025-2026\\Project CG \u0026 VC 2025-2026\\CameraController.h",
+              "RelativeToolTip": "CameraController.h",
+              "ViewState": "AgIAAAYAAAAAAAAAAAAAACIAAAAZAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
-              "WhenOpened": "2026-05-21T13:38:06.512Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "main.cpp",
-              "DocumentMoniker": "C:\\Users\\gerbe\\Computer-Graphics-and-Visual-Computing-project\\main.cpp",
-              "RelativeDocumentMoniker": "..\\..\\Computer-Graphics-and-Visual-Computing-project\\main.cpp",
-              "ToolTip": "C:\\Users\\gerbe\\Computer-Graphics-and-Visual-Computing-project\\main.cpp",
-              "RelativeToolTip": "..\\..\\Computer-Graphics-and-Visual-Computing-project\\main.cpp",
-              "ViewState": "AgIAAP4BAAAAAAAAAAAAAIgBAAA9AAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
-              "WhenOpened": "2026-05-21T13:24:56.89Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "main.cpp",
-              "DocumentMoniker": "C:\\Users\\gerbe\\CG-VC_2025-2026\\Project CG \u0026 VC 2025-2026\\main.cpp",
-              "RelativeDocumentMoniker": "main.cpp",
-              "ToolTip": "C:\\Users\\gerbe\\CG-VC_2025-2026\\Project CG \u0026 VC 2025-2026\\main.cpp",
-              "RelativeToolTip": "main.cpp",
-              "ViewState": "AgIAACcAAAAAAAAAAAAAADcAAAAvAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
-              "WhenOpened": "2026-04-21T13:31:43.676Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-05-23T08:54:43.53Z"
             }
           ]
         }
