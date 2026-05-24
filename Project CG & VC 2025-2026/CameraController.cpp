@@ -46,10 +46,6 @@ void CameraController::processMouseMovement(float xoffset, float yoffset) {
         camera->ProcessMouseMovement(xoffset, yoffset);
 }
 
-void CameraController::processMouseScroll(float yoffset) {
-    camera->ProcessMouseScroll(yoffset);
-}
-
 void CameraController::updateFollowCamera(const glm::vec3& targetPos, const glm::vec3& direction) {
     if (!followView) return;
     auto* follow = dynamic_cast<FollowCamera*>(camera.get());

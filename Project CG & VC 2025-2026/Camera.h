@@ -39,7 +39,6 @@ public:
 
     void ProcessKeyboard(Camera_Movement direction, float deltaTime);
     void ProcessMouseMovement(float xoffset, float yoffset);
-    void ProcessMouseScroll(float yoffset);
 
 protected:
     void updateCameraVectors();

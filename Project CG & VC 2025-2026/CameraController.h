@@ -14,18 +14,15 @@ public:
 	glm::mat4 getViewMatrix()  const;
 	glm::vec3 getPosition()    const;
 
-	float     getZoom()        const;
+	float getZoom()        const;
 
-	bool      isFollowMode()   const { return followView; }
+	bool isFollowMode()   const { return followView; }
 
 	// Verwerkt toetsenbord en camera toggle. Elke frame aanroepen
 	void processInput(GLFWwindow* window, float deltaTime);
 
 	// Verwerk muisbeweging
 	void processMouseMovement(float xoffset, float yoffset);
-
-	// Verwerk scroll
-	void processMouseScroll(float yoffset);
 
 	// Update follow-camera naar positie/richting van het object
 	void updateFollowCamera(const glm::vec3& targetPos, const glm::vec3& direction);

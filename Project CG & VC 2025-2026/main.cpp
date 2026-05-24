@@ -53,10 +53,6 @@ void mouse_callback(GLFWwindow* window, double xpos, double ypos) {
     cameraController.processMouseMovement(xoffset, yoffset);
 }
 
-void scroll_callback(GLFWwindow* window, double xoffset, double yoffset) {
-    cameraController.processMouseScroll((float)yoffset);
-}
-
 void processLightChange(GLFWwindow* window) {
     // Wissel kleur met L - toets
     static bool lWasPressed = false;

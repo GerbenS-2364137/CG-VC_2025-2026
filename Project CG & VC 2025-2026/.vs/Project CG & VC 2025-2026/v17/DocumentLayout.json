@@ -3,35 +3,28 @@
   "WorkspaceRootPath": "C:\\Users\\gerbe\\CG-VC_2025-2026\\Project CG \u0026 VC 2025-2026\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{11C086EE-7B8A-4724-9309-CF9862FF5589}|Project CG \u0026 VC 2025-2026.vcxproj|C:\\Users\\gerbe\\CG-VC_2025-2026\\Project CG \u0026 VC 2025-2026\\Camera.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{11C086EE-7B8A-4724-9309-CF9862FF5589}|Project CG \u0026 VC 2025-2026.vcxproj|solutionrelative:Camera.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{11C086EE-7B8A-4724-9309-CF9862FF5589}|Project CG \u0026 VC 2025-2026.vcxproj|C:\\Users\\gerbe\\CG-VC_2025-2026\\Project CG \u0026 VC 2025-2026\\FreeCam.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{11C086EE-7B8A-4724-9309-CF9862FF5589}|Project CG \u0026 VC 2025-2026.vcxproj|solutionrelative:FreeCam.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{11C086EE-7B8A-4724-9309-CF9862FF5589}|Project CG \u0026 VC 2025-2026.vcxproj|C:\\Users\\gerbe\\CG-VC_2025-2026\\Project CG \u0026 VC 2025-2026\\Camera.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{11C086EE-7B8A-4724-9309-CF9862FF5589}|Project CG \u0026 VC 2025-2026.vcxproj|solutionrelative:Camera.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{11C086EE-7B8A-4724-9309-CF9862FF5589}|Project CG \u0026 VC 2025-2026.vcxproj|C:\\Users\\gerbe\\CG-VC_2025-2026\\Project CG \u0026 VC 2025-2026\\CameraController.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{11C086EE-7B8A-4724-9309-CF9862FF5589}|Project CG \u0026 VC 2025-2026.vcxproj|solutionrelative:CameraController.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{11C086EE-7B8A-4724-9309-CF9862FF5589}|Project CG \u0026 VC 2025-2026.vcxproj|C:\\Users\\gerbe\\CG-VC_2025-2026\\Project CG \u0026 VC 2025-2026\\CameraController.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{11C086EE-7B8A-4724-9309-CF9862FF5589}|Project CG \u0026 VC 2025-2026.vcxproj|solutionrelative:CameraController.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{11C086EE-7B8A-4724-9309-CF9862FF5589}|Project CG \u0026 VC 2025-2026.vcxproj|C:\\Users\\gerbe\\CG-VC_2025-2026\\Project CG \u0026 VC 2025-2026\\main.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
       "RelativeMoniker": "D:0:0:{11C086EE-7B8A-4724-9309-CF9862FF5589}|Project CG \u0026 VC 2025-2026.vcxproj|solutionrelative:main.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{11C086EE-7B8A-4724-9309-CF9862FF5589}|Project CG \u0026 VC 2025-2026.vcxproj|C:\\Users\\gerbe\\CG-VC_2025-2026\\Project CG \u0026 VC 2025-2026\\ChromaKeyOverlay.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
-      "RelativeMoniker": "D:0:0:{11C086EE-7B8A-4724-9309-CF9862FF5589}|Project CG \u0026 VC 2025-2026.vcxproj|solutionrelative:ChromaKeyOverlay.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{11C086EE-7B8A-4724-9309-CF9862FF5589}|Project CG \u0026 VC 2025-2026.vcxproj|C:\\Users\\gerbe\\CG-VC_2025-2026\\Project CG \u0026 VC 2025-2026\\ChromaKeyOverlay.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
-      "RelativeMoniker": "D:0:0:{11C086EE-7B8A-4724-9309-CF9862FF5589}|Project CG \u0026 VC 2025-2026.vcxproj|solutionrelative:ChromaKeyOverlay.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\gerbe\\AppData\\Local\\Temp\\551a6136-99dd-4aad-a03e-146e5bd557a1_files.zip.7a1\\ChromaKeyOverlay.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{11C086EE-7B8A-4724-9309-CF9862FF5589}|Project CG \u0026 VC 2025-2026.vcxproj|C:\\Users\\gerbe\\CG-VC_2025-2026\\Project CG \u0026 VC 2025-2026\\chroma_key_frag.glsl||{8B382828-6202-11D1-8870-0000F87579D2}",
-      "RelativeMoniker": "D:0:0:{11C086EE-7B8A-4724-9309-CF9862FF5589}|Project CG \u0026 VC 2025-2026.vcxproj|solutionrelative:chroma_key_frag.glsl||{8B382828-6202-11D1-8870-0000F87579D2}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\gerbe\\AppData\\Local\\Temp\\6fd95aed-fb8b-4e5e-bee5-ef10a6f9effb_files.zip.ffb\\ChromaKeyOverlay.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\gerbe\\AppData\\Local\\Temp\\cdd7b1be-673e-40b8-bea6-84d90ef75919_files.zip.919\\ChromaKeyOverlay.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\gerbe\\AppData\\Local\\Temp\\dee3b114-b121-46fb-a163-d89660ce9f0a_files.zip.f0a\\picking_integratie_main.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\gerbe\\AppData\\Local\\Temp\\401ed06b-d652-4aeb-98b5-3a4155a7a731_files.zip.731\\Picking.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     }
   ],
   "DocumentGroupContainers": [
@@ -41,124 +34,85 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 7,
+          "SelectedChildIndex": 0,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "chroma_key_frag.glsl",
-              "DocumentMoniker": "C:\\Users\\gerbe\\CG-VC_2025-2026\\Project CG \u0026 VC 2025-2026\\chroma_key_frag.glsl",
-              "RelativeDocumentMoniker": "chroma_key_frag.glsl",
-              "ToolTip": "C:\\Users\\gerbe\\CG-VC_2025-2026\\Project CG \u0026 VC 2025-2026\\chroma_key_frag.glsl",
-              "RelativeToolTip": "chroma_key_frag.glsl",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001001|",
-              "WhenOpened": "2026-05-24T09:13:42.595Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "ChromaKeyOverlay.h",
-              "DocumentMoniker": "C:\\Users\\gerbe\\AppData\\Local\\Temp\\551a6136-99dd-4aad-a03e-146e5bd557a1_files.zip.7a1\\ChromaKeyOverlay.h",
-              "RelativeDocumentMoniker": "..\\..\\AppData\\Local\\Temp\\551a6136-99dd-4aad-a03e-146e5bd557a1_files.zip.7a1\\ChromaKeyOverlay.h",
-              "ToolTip": "C:\\Users\\gerbe\\AppData\\Local\\Temp\\551a6136-99dd-4aad-a03e-146e5bd557a1_files.zip.7a1\\ChromaKeyOverlay.h [Read Only]",
-              "RelativeToolTip": "..\\..\\AppData\\Local\\Temp\\551a6136-99dd-4aad-a03e-146e5bd557a1_files.zip.7a1\\ChromaKeyOverlay.h [Read Only]",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABUAAAAAAAAAAAAAAA==",
+              "DocumentIndex": 0,
+              "Title": "Camera.h",
+              "DocumentMoniker": "C:\\Users\\gerbe\\CG-VC_2025-2026\\Project CG \u0026 VC 2025-2026\\Camera.h",
+              "RelativeDocumentMoniker": "Camera.h",
+              "ToolTip": "C:\\Users\\gerbe\\CG-VC_2025-2026\\Project CG \u0026 VC 2025-2026\\Camera.h",
+              "RelativeToolTip": "Camera.h",
+              "ViewState": "AgIAABIAAAAAAAAAAAAAABwAAAAbAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
-              "WhenOpened": "2026-05-24T09:08:18.02Z",
-              "EditorCaption": " [Read Only]"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "ChromaKeyOverlay.h",
-              "DocumentMoniker": "C:\\Users\\gerbe\\CG-VC_2025-2026\\Project CG \u0026 VC 2025-2026\\ChromaKeyOverlay.h",
-              "RelativeDocumentMoniker": "ChromaKeyOverlay.h",
-              "ToolTip": "C:\\Users\\gerbe\\CG-VC_2025-2026\\Project CG \u0026 VC 2025-2026\\ChromaKeyOverlay.h",
-              "RelativeToolTip": "ChromaKeyOverlay.h",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABMAAAASAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
-              "WhenOpened": "2026-05-24T09:08:12.336Z",
+              "WhenOpened": "2026-05-24T11:16:34.826Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 1,
-              "Title": "ChromaKeyOverlay.cpp",
-              "DocumentMoniker": "C:\\Users\\gerbe\\CG-VC_2025-2026\\Project CG \u0026 VC 2025-2026\\ChromaKeyOverlay.cpp",
-              "RelativeDocumentMoniker": "ChromaKeyOverlay.cpp",
-              "ToolTip": "C:\\Users\\gerbe\\CG-VC_2025-2026\\Project CG \u0026 VC 2025-2026\\ChromaKeyOverlay.cpp",
-              "RelativeToolTip": "ChromaKeyOverlay.cpp",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAEsAAAAnAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
-              "WhenOpened": "2026-05-24T09:03:09.001Z",
+              "Title": "FreeCam.h",
+              "DocumentMoniker": "C:\\Users\\gerbe\\CG-VC_2025-2026\\Project CG \u0026 VC 2025-2026\\FreeCam.h",
+              "RelativeDocumentMoniker": "FreeCam.h",
+              "ToolTip": "C:\\Users\\gerbe\\CG-VC_2025-2026\\Project CG \u0026 VC 2025-2026\\FreeCam.h",
+              "RelativeToolTip": "FreeCam.h",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAEAAAAQAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
+              "WhenOpened": "2026-05-24T11:16:33.574Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
-              "Title": "ChromaKeyOverlay.cpp",
-              "DocumentMoniker": "C:\\Users\\gerbe\\AppData\\Local\\Temp\\cdd7b1be-673e-40b8-bea6-84d90ef75919_files.zip.919\\ChromaKeyOverlay.cpp",
-              "RelativeDocumentMoniker": "..\\..\\AppData\\Local\\Temp\\cdd7b1be-673e-40b8-bea6-84d90ef75919_files.zip.919\\ChromaKeyOverlay.cpp",
-              "ToolTip": "C:\\Users\\gerbe\\AppData\\Local\\Temp\\cdd7b1be-673e-40b8-bea6-84d90ef75919_files.zip.919\\ChromaKeyOverlay.cpp [Read Only]",
-              "RelativeToolTip": "..\\..\\AppData\\Local\\Temp\\cdd7b1be-673e-40b8-bea6-84d90ef75919_files.zip.919\\ChromaKeyOverlay.cpp [Read Only]",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAD8AAAAAAAAAAAAAAA==",
+              "DocumentIndex": 2,
+              "Title": "Camera.cpp",
+              "DocumentMoniker": "C:\\Users\\gerbe\\CG-VC_2025-2026\\Project CG \u0026 VC 2025-2026\\Camera.cpp",
+              "RelativeDocumentMoniker": "Camera.cpp",
+              "ToolTip": "C:\\Users\\gerbe\\CG-VC_2025-2026\\Project CG \u0026 VC 2025-2026\\Camera.cpp",
+              "RelativeToolTip": "Camera.cpp",
+              "ViewState": "AgIAAAoAAAAAAAAAAAAAAB0AAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
-              "WhenOpened": "2026-05-24T09:02:49.895Z",
-              "EditorCaption": " [Read Only]"
+              "WhenOpened": "2026-05-24T11:14:42.7Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 7,
-              "Title": "picking_integratie_main.cpp",
-              "DocumentMoniker": "C:\\Users\\gerbe\\AppData\\Local\\Temp\\dee3b114-b121-46fb-a163-d89660ce9f0a_files.zip.f0a\\picking_integratie_main.cpp",
-              "RelativeDocumentMoniker": "..\\..\\AppData\\Local\\Temp\\dee3b114-b121-46fb-a163-d89660ce9f0a_files.zip.f0a\\picking_integratie_main.cpp",
-              "ToolTip": "C:\\Users\\gerbe\\AppData\\Local\\Temp\\dee3b114-b121-46fb-a163-d89660ce9f0a_files.zip.f0a\\picking_integratie_main.cpp [Read Only]",
-              "RelativeToolTip": "..\\..\\AppData\\Local\\Temp\\dee3b114-b121-46fb-a163-d89660ce9f0a_files.zip.f0a\\picking_integratie_main.cpp [Read Only]",
-              "ViewState": "AgIAADAAAAAAAAAAAAAAAEQAAABFAAAAAAAAAA==",
+              "DocumentIndex": 3,
+              "Title": "CameraController.cpp",
+              "DocumentMoniker": "C:\\Users\\gerbe\\CG-VC_2025-2026\\Project CG \u0026 VC 2025-2026\\CameraController.cpp",
+              "RelativeDocumentMoniker": "CameraController.cpp",
+              "ToolTip": "C:\\Users\\gerbe\\CG-VC_2025-2026\\Project CG \u0026 VC 2025-2026\\CameraController.cpp",
+              "RelativeToolTip": "CameraController.cpp",
+              "ViewState": "AgIAACEAAAAAAAAAAAAAAC4AAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
-              "WhenOpened": "2026-05-24T09:00:21.353Z",
-              "EditorCaption": " [Read Only]"
+              "WhenOpened": "2026-05-24T11:14:03.461Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 8,
-              "Title": "Picking.h",
-              "DocumentMoniker": "C:\\Users\\gerbe\\AppData\\Local\\Temp\\401ed06b-d652-4aeb-98b5-3a4155a7a731_files.zip.731\\Picking.h",
-              "RelativeDocumentMoniker": "..\\..\\AppData\\Local\\Temp\\401ed06b-d652-4aeb-98b5-3a4155a7a731_files.zip.731\\Picking.h",
-              "ToolTip": "C:\\Users\\gerbe\\AppData\\Local\\Temp\\401ed06b-d652-4aeb-98b5-3a4155a7a731_files.zip.731\\Picking.h [Read Only]",
-              "RelativeToolTip": "..\\..\\AppData\\Local\\Temp\\401ed06b-d652-4aeb-98b5-3a4155a7a731_files.zip.731\\Picking.h [Read Only]",
-              "ViewState": "AgIAADgAAAAAAAAAAAAAAEoAAAAYAAAAAAAAAA==",
+              "DocumentIndex": 4,
+              "Title": "CameraController.h",
+              "DocumentMoniker": "C:\\Users\\gerbe\\CG-VC_2025-2026\\Project CG \u0026 VC 2025-2026\\CameraController.h",
+              "RelativeDocumentMoniker": "CameraController.h",
+              "ToolTip": "C:\\Users\\gerbe\\CG-VC_2025-2026\\Project CG \u0026 VC 2025-2026\\CameraController.h",
+              "RelativeToolTip": "CameraController.h",
+              "ViewState": "AgIAAAwAAAAAAAAAAAAAABgAAAA5AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
-              "WhenOpened": "2026-05-24T08:57:31.428Z",
-              "EditorCaption": " [Read Only]"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "main.cpp",
-              "DocumentMoniker": "C:\\Users\\gerbe\\CG-VC_2025-2026\\Project CG \u0026 VC 2025-2026\\main.cpp",
-              "RelativeDocumentMoniker": "main.cpp",
-              "ToolTip": "C:\\Users\\gerbe\\CG-VC_2025-2026\\Project CG \u0026 VC 2025-2026\\main.cpp",
-              "RelativeToolTip": "main.cpp",
-              "ViewState": "AgIAAMAAAAAAAAAAAAAhwNEAAABjAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
-              "WhenOpened": "2026-04-21T13:31:43.676Z",
+              "WhenOpened": "2026-05-24T11:12:49.4Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 5,
-              "Title": "ChromaKeyOverlay.cpp",
-              "DocumentMoniker": "C:\\Users\\gerbe\\AppData\\Local\\Temp\\6fd95aed-fb8b-4e5e-bee5-ef10a6f9effb_files.zip.ffb\\ChromaKeyOverlay.cpp",
-              "RelativeDocumentMoniker": "..\\..\\AppData\\Local\\Temp\\6fd95aed-fb8b-4e5e-bee5-ef10a6f9effb_files.zip.ffb\\ChromaKeyOverlay.cpp",
-              "ToolTip": "C:\\Users\\gerbe\\AppData\\Local\\Temp\\6fd95aed-fb8b-4e5e-bee5-ef10a6f9effb_files.zip.ffb\\ChromaKeyOverlay.cpp [Read Only]",
-              "RelativeToolTip": "..\\..\\AppData\\Local\\Temp\\6fd95aed-fb8b-4e5e-bee5-ef10a6f9effb_files.zip.ffb\\ChromaKeyOverlay.cpp [Read Only]",
-              "ViewState": "AgIAAD8AAAAAAAAAAAAAAFIAAAAwAAAAAAAAAA==",
+              "Title": "main.cpp",
+              "DocumentMoniker": "C:\\Users\\gerbe\\CG-VC_2025-2026\\Project CG \u0026 VC 2025-2026\\main.cpp",
+              "RelativeDocumentMoniker": "main.cpp",
+              "ToolTip": "C:\\Users\\gerbe\\CG-VC_2025-2026\\Project CG \u0026 VC 2025-2026\\main.cpp",
+              "RelativeToolTip": "main.cpp",
+              "ViewState": "AgIAAAwAAAAAAAAAAAAAAAoAAAAdAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
-              "WhenOpened": "2026-05-24T09:20:15.717Z",
-              "EditorCaption": " [Read Only]"
+              "WhenOpened": "2026-04-21T13:31:43.676Z",
+              "EditorCaption": ""
             }
           ]
         }
